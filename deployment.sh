@@ -36,14 +36,6 @@ LOGFILE="deploy_$(date +%Y%m%d_%H%M%S).log"
 exec > >(tee -a "$LOGFILE") 2>&1
 
 START_TIME=$(date +%s)
-
-echo -e "${YELLOW}Down Database And Minio"
-docker compose -f utils-app.docker-compose.yaml down
-
-echo -e "${YELLOW}Up Database And Minio"
-docker compose -f utils-app.docker-compose.yaml up -d
-
-
 echo -e "${YELLOW}Removing old Docker image...${NC}"
 docker image rm -f sigmatech-test:latest
 

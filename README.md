@@ -34,7 +34,9 @@ Pastikan file konfigurasi seperti .env dan app.log sudah diatur dengan benar, te
 
 ### 3. Run Application
 Jalankan aplikasi dengan menjalankan script deployment.sh. Jangan lupa untuk memberikan hak akses eksekusi pada script tersebut dengan perintah:
+Note `Jangan Lupa Atur Access Key Dan Secret Key Minio`
 ```bash
+docker compose -f utils-app.docker-compose.yaml up -d
 chmod +x deployment.sh
 ./deployment.sh
 ```
