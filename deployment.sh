@@ -37,10 +37,10 @@ exec > >(tee -a "$LOGFILE") 2>&1
 
 START_TIME=$(date +%s)
 echo -e "${YELLOW}Removing old Docker image...${NC}"
-docker image rm -f sigmatech-test:latest
+docker image rm -f kreditplus-test:latest
 
 echo -e "${YELLOW}Building new Docker image...${NC}"
-docker build -t sigmatech-test:latest .
+docker build -t kreditplus-test:latest .
 
 echo -e "${YELLOW}Bringing down existing Docker containers...${NC}"
 docker compose down

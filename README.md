@@ -31,6 +31,7 @@ cd stech
 
 ### 2. Persiapkan Konfigurasi
 Pastikan file konfigurasi seperti .env dan app.log sudah diatur dengan benar, termasuk konfigurasi untuk MinIO, MariaDB, dan Paseto.
+Dan Jangan lupa untuk import file `001_initial_migrate.sql`
 
 ### 3. Run Application
 Jalankan aplikasi dengan menjalankan script deployment.sh. Jangan lupa untuk memberikan hak akses eksekusi pada script tersebut dengan perintah:

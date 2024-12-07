@@ -5,15 +5,15 @@ import (
 	"kreditplus-test/dto"
 	"kreditplus-test/helper"
 	"kreditplus-test/model"
-	serv "kreditplus-test/service"
+	"kreditplus-test/service"
 	"net/http"
 )
 
 type CustomerController struct {
-	customerService *serv.CustomerService
+	customerService *service.CustomerService
 }
 
-func NewCustomerController(customerService *serv.CustomerService) *CustomerController {
+func NewCustomerController(customerService *service.CustomerService) *CustomerController {
 	return &CustomerController{customerService}
 }
 
